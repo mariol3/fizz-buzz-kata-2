@@ -1,3 +1,4 @@
+import org.junit.Before;
 import org.junit.Test;
 
 import java.applet.AudioClip;
@@ -5,21 +6,21 @@ import java.applet.AudioClip;
 import static org.junit.Assert.assertEquals;
 
 public class FizzBuzzTest {
-    @Test
-    public void oneShouldPrintOne() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
 
-        String fizzBuzzed = fizzBuzz.play(1);
+    private FizzBuzz fizzBuzz;
 
-        assertEquals("1", fizzBuzzed);
+    @Before
+    public void setUp() throws Exception {
+        fizzBuzz = new FizzBuzz();
     }
 
     @Test
-    public void name() {
-        FizzBuzz fizzBuzz = new FizzBuzz();
+    public void oneShouldPrintOne() {
+        assertEquals("1", fizzBuzz.play(1));
+    }
 
-        String fizzBuzzed = fizzBuzz.play(2);
-
-        assertEquals("2", fizzBuzzed);
+    @Test
+    public void twoShouldPrintTwo() {
+        assertEquals("2", fizzBuzz.play(2));
     }
 }
