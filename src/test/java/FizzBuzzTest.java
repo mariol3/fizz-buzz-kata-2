@@ -30,7 +30,12 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void threeShoulPrintFizz() {
+    public void threeShouldPrintFizz() {
         assertEquals("Fizz", fizzBuzz.play(3));
+    }
+
+    @Test
+    public void SixShouldPrintFizz() {
+        assertEquals("Fizz", fizzBuzz.play(6));
     }
 }
