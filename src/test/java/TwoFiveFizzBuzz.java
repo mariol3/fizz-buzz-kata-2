@@ -19,8 +19,17 @@ public class TwoFiveFizzBuzz {
     }
 
     @Test
+    public void threeShouldPrintThree() {
+        assertEquals("3", fizzBuzz.play(3));
+    }
+
+    @Test
+    public void sevenShouldPrintSeven() {
+        assertEquals("7", fizzBuzz.play(7));
+    }
+
+    @Test
     public void twoShouldPrintFizz() {
         assertEquals("Fizz", fizzBuzz.play(2));
     }
-
 }
