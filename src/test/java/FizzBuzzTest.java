@@ -43,4 +43,9 @@ public class FizzBuzzTest {
     public void nineShouldPrintFizz() {
         assertEquals("Fizz", fizzBuzz.play(9));
     }
+
+    @Test
+    public void fiveShouldPrintBuzz() {
+        assertEquals("Buzz", fizzBuzz.play(5));
+    }
 }
