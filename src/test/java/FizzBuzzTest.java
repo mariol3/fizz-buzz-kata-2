@@ -23,4 +23,9 @@ public class FizzBuzzTest {
     public void twoShouldPrintTwo() {
         assertEquals("2", fizzBuzz.play(2));
     }
+
+    @Test
+    public void fourShouldPrintFour() {
+        assertEquals("4", fizzBuzz.play(4));
+    }
 }
