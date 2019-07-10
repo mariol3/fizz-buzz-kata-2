@@ -57,4 +57,14 @@ public class TwoFiveFizzBuzz {
     public void twentyFiveShouldPrintBuzz() {
         assertEquals("Buzz", fizzBuzz.play(25));
     }
+
+    @Test
+    public void tenShouldPrintFizzBuzz() {
+        assertEquals("FizzBuzz", fizzBuzz.play(10));
+    }
+
+    @Test
+    public void twentyShouldPrintFizzBuzz() {
+        assertEquals("FizzBuzz", fizzBuzz.play(20));
+    }
 }
