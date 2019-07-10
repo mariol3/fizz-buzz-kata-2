@@ -1,6 +1,6 @@
 public class FizzBuzz {
     public String play(int number) {
-        if (number == 15 || number == 30 || number == 45) return "FizzBuzz";
+        if (isDivisibleByThree(number) && isDivisibleByFive(number)) return "FizzBuzz";
         else if (isDivisibleByThree(number)) return "Fizz";
         else if (isDivisibleByFive(number)) return "Buzz";
         else return String.valueOf(number);
