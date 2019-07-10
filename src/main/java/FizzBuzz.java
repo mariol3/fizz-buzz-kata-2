@@ -1,8 +1,12 @@
 public class FizzBuzz {
     public String play(int number) {
         if (isDivisibleByThree(number)) return "Fizz";
-        else if (number == 5 || number == 10 || number == 20) return "Buzz";
+        else if (isDivisibleByFive(number)) return "Buzz";
         else return String.valueOf(number);
+    }
+
+    private boolean isDivisibleByFive(int number) {
+        return number % 5 == 0;
     }
 
     private boolean isDivisibleByThree(int number) {
