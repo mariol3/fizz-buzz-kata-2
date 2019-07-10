@@ -1,16 +1,17 @@
 public class FizzBuzz {
+    private GameRules gameRules = new ClassicGameRules();
+
+    public FizzBuzz() {
+    }
+
+    public FizzBuzz(GameRules gameRules) {
+        this.gameRules = gameRules;
+    }
+
     public String play(int number) {
-        if (isDivisibleByThree(number) && isDivisibleByFive(number)) return "FizzBuzz";
-        else if (isDivisibleByThree(number)) return "Fizz";
-        else if (isDivisibleByFive(number)) return "Buzz";
+        if (gameRules.isFizzBuzz(number)) return "FizzBuzz";
+        else if (gameRules.isFizz(number)) return "Fizz";
+        else if (gameRules.isBuzz(number)) return "Buzz";
         else return String.valueOf(number);
-    }
-
-    private boolean isDivisibleByFive(int number) {
-        return number % 5 == 0;
-    }
-
-    private boolean isDivisibleByThree(int number) {
-        return number % 3 == 0;
     }
 }
