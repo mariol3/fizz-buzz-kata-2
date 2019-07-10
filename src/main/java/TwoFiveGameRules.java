@@ -6,7 +6,7 @@ public class TwoFiveGameRules implements GameRules {
 
     @Override
     public boolean isBuzz(int number) {
-        return false;
+        return number % 5 == 0;
     }
 
     @Override
