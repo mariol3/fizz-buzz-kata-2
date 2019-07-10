@@ -1,7 +1,7 @@
 public class TwoFiveGameRules implements GameRules {
     @Override
     public boolean isFizz(int number) {
-        return number == 2;
+        return number % 2 == 0;
     }
 
     @Override

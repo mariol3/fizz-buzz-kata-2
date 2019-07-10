@@ -32,4 +32,14 @@ public class TwoFiveFizzBuzz {
     public void twoShouldPrintFizz() {
         assertEquals("Fizz", fizzBuzz.play(2));
     }
+
+    @Test
+    public void fourShouldPrintFizz() {
+        assertEquals("Fizz", fizzBuzz.play(4));
+    }
+
+    @Test
+    public void sixShouldPrintFizz() {
+        assertEquals("Fizz", fizzBuzz.play(6));
+    }
 }
