@@ -35,7 +35,12 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void SixShouldPrintFizz() {
+    public void sixShouldPrintFizz() {
         assertEquals("Fizz", fizzBuzz.play(6));
+    }
+
+    @Test
+    public void nineShouldPrintFizz() {
+        assertEquals("Fizz", fizzBuzz.play(9));
     }
 }
