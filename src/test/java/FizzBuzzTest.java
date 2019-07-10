@@ -1,7 +1,8 @@
 import org.junit.Before;
 import org.junit.Test;
 
-import java.applet.AudioClip;
+import java.util.ArrayList;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
@@ -72,5 +73,18 @@ public class FizzBuzzTest {
     @Test
     public void fourtyFiveShouldPrintFizzBuzz() {
         assertEquals("FizzBuzz", fizzBuzz.play(45));
+    }
+
+    @Test
+    public void acceptance() {
+        int[] numbers = new int[]           {  1,   2,    3,     4,    5,      6,     7,   8,    9,      10,    11,    12 ,   13,   14,      15 };
+        String[] expected = new String[]    { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz" };
+        List<String> actual = new ArrayList<>();
+
+        for (int number : numbers) {
+            actual.add(fizzBuzz.play(number));
+        }
+
+        assertEquals(expected, actual.toArray());
     }
 }
