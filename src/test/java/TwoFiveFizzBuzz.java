@@ -2,6 +2,10 @@ import org.junit.Before;
 import org.junit.Ignore;
 import org.junit.Test;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
 public class TwoFiveFizzBuzz {
@@ -66,5 +70,18 @@ public class TwoFiveFizzBuzz {
     @Test
     public void twentyShouldPrintFizzBuzz() {
         assertEquals("FizzBuzz", fizzBuzz.play(20));
+    }
+
+    @Test
+    public void acceptance() {
+        int[] numbers = new int[]           {  1,     2,    3,    4,      5,      6,     7,     8,    9,      10,      11,    12 ,   13,    14,     15 };
+        String[] expected = new String[]    { "1", "Fizz", "3", "Fizz", "Buzz", "Fizz", "7", "Fizz", "9", "FizzBuzz", "11", "Fizz", "13", "Fizz", "Buzz" };
+        List<String> actual = new ArrayList<>();
+
+        for (int number : numbers) {
+            actual.add(fizzBuzz.play(number));
+        }
+
+        assertArrayEquals(expected, actual.toArray());
     }
 }
