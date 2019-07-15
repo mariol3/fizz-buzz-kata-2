@@ -13,4 +13,9 @@ public class TwoFiveGameRules implements GameRules {
     public boolean isFizzBuzz(int number) {
         return isFizz(number) && isBuzz(number);
     }
+
+    @Override
+    public boolean isBang(int number) {
+        return false;
+    }
 }
