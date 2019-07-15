@@ -1,4 +1,5 @@
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.ArrayList;
@@ -91,6 +92,11 @@ public class FizzBuzzTest {
     @Test
     public void twentyEightShouldPrintBang() {
         assertEquals("Bang", fizzBuzz.play(28));
+    }
+
+    @Test
+    public void twentyOneShouldPrintFizzBang() {
+        assertEquals("FizzBang", fizzBuzz.play(21));
     }
 
     @Test
