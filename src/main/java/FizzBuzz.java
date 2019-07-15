@@ -14,6 +14,7 @@ public class FizzBuzz {
         if (gameRules.isFizzBuzz(number)) return "FizzBuzz";
         else if (gameRules.isFizz(number)) return "Fizz";
         else if (gameRules.isBuzz(number)) return "Buzz";
+        else if (number == 7 && gameRules instanceof ClassicGameRules) return "Bang";
         else return String.valueOf(number);
     }
 }
