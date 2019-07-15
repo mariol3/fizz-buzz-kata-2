@@ -1,3 +1,5 @@
+package dev.mariogrimaldi.kata.fizzbuzz.rule;
+
 public class MultiplesOfFive implements GameRule {
     @Override
     public boolean matches(int number) {

@@ -1,7 +1,9 @@
-public class MultiplesOfThree implements GameRule {
+package dev.mariogrimaldi.kata.fizzbuzz.rule;
+
+public class MultiplesOfTwo implements GameRule {
     @Override
     public boolean matches(int number) {
-        return number % 3 == 0;
+        return number % 2 == 0;
     }
 
     @Override

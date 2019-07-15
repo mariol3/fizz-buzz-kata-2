@@ -1,3 +1,7 @@
+package dev.mariogrimaldi.kata.fizzbuzz;
+
+import dev.mariogrimaldi.kata.fizzbuzz.rule.GameRule;
+
 import java.util.ArrayList;
 import java.util.List;
 

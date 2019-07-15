@@ -1,10 +1,16 @@
+package dev.mariogrimaldi.kata.fizzbuzz;
+
+import dev.mariogrimaldi.kata.fizzbuzz.rule.MultiplesOfEleven;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.MultiplesOfFive;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.MultiplesOfSeven;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.MultiplesOfThree;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
 
 import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
 
 public class FizzBuzzTest {
 
@@ -22,132 +28,132 @@ public class FizzBuzzTest {
 
     @Test
     public void oneShouldPrintOne() {
-        assertEquals("1", fizzBuzz.play(1));
+        Assert.assertEquals("1", fizzBuzz.play(1));
     }
 
     @Test
     public void twoShouldPrintTwo() {
-        assertEquals("2", fizzBuzz.play(2));
+        Assert.assertEquals("2", fizzBuzz.play(2));
     }
 
     @Test
     public void fourShouldPrintFour() {
-        assertEquals("4", fizzBuzz.play(4));
+        Assert.assertEquals("4", fizzBuzz.play(4));
     }
 
     @Test
     public void threeShouldPrintFizz() {
-        assertEquals("Fizz", fizzBuzz.play(3));
+        Assert.assertEquals("Fizz", fizzBuzz.play(3));
     }
 
     @Test
     public void sixShouldPrintFizz() {
-        assertEquals("Fizz", fizzBuzz.play(6));
+        Assert.assertEquals("Fizz", fizzBuzz.play(6));
     }
 
     @Test
     public void nineShouldPrintFizz() {
-        assertEquals("Fizz", fizzBuzz.play(9));
+        Assert.assertEquals("Fizz", fizzBuzz.play(9));
     }
 
     @Test
     public void fiveShouldPrintBuzz() {
-        assertEquals("Buzz", fizzBuzz.play(5));
+        Assert.assertEquals("Buzz", fizzBuzz.play(5));
     }
 
     @Test
     public void tenShouldPrintBuzz() {
-        assertEquals("Buzz", fizzBuzz.play(10));
+        Assert.assertEquals("Buzz", fizzBuzz.play(10));
     }
 
     @Test
     public void twentyShouldPrintBuzz() {
-        assertEquals("Buzz", fizzBuzz.play(20));
+        Assert.assertEquals("Buzz", fizzBuzz.play(20));
     }
 
     @Test
     public void fifteenShouldPrintFizzBuzz() {
-        assertEquals("FizzBuzz", fizzBuzz.play(15));
+        Assert.assertEquals("FizzBuzz", fizzBuzz.play(15));
     }
 
     @Test
     public void thirtyShouldPrintFizzBuzz() {
-        assertEquals("FizzBuzz", fizzBuzz.play(30));
+        Assert.assertEquals("FizzBuzz", fizzBuzz.play(30));
     }
 
     @Test
     public void fourtyFiveShouldPrintFizzBuzz() {
-        assertEquals("FizzBuzz", fizzBuzz.play(45));
+        Assert.assertEquals("FizzBuzz", fizzBuzz.play(45));
     }
 
     @Test
     public void sevenShouldPrintBang() {
-        assertEquals("Bang", fizzBuzz.play(7));
+        Assert.assertEquals("Bang", fizzBuzz.play(7));
     }
 
     @Test
     public void fourteenShouldPrintBang() {
-        assertEquals("Bang", fizzBuzz.play(14));
+        Assert.assertEquals("Bang", fizzBuzz.play(14));
     }
 
     @Test
     public void twentyEightShouldPrintBang() {
-        assertEquals("Bang", fizzBuzz.play(28));
+        Assert.assertEquals("Bang", fizzBuzz.play(28));
     }
 
     @Test
     public void twentyOneShouldPrintFizzBang() {
-        assertEquals("FizzBang", fizzBuzz.play(21));
+        Assert.assertEquals("FizzBang", fizzBuzz.play(21));
     }
 
     @Test
     public void fourtyTwoShouldPrintFizzBang() {
-        assertEquals("FizzBang", fizzBuzz.play(42));
+        Assert.assertEquals("FizzBang", fizzBuzz.play(42));
     }
 
     @Test
     public void sixtyThreeShouldPrintFizzBang() {
-        assertEquals("FizzBang", fizzBuzz.play(63));
+        Assert.assertEquals("FizzBang", fizzBuzz.play(63));
     }
 
     @Test
     public void thirtyFiveShouldPrintBuzzBang() {
-        assertEquals("BuzzBang", fizzBuzz.play(35));
+        Assert.assertEquals("BuzzBang", fizzBuzz.play(35));
     }
 
     @Test
     public void oneHundredFiveShouldPrintFizzBuzzBang() {
-        assertEquals("FizzBuzzBang", fizzBuzz.play(105));
+        Assert.assertEquals("FizzBuzzBang", fizzBuzz.play(105));
     }
 
     @Test
     public void twentyTwoShouldPrintPuff() {
-        assertEquals("Puff", fizzBuzz.play(22));
+        Assert.assertEquals("Puff", fizzBuzz.play(22));
     }
 
     @Test
     public void thirtyThreeShouldPrintFizzPuff() {
-        assertEquals("FizzPuff", fizzBuzz.play(33));
+        Assert.assertEquals("FizzPuff", fizzBuzz.play(33));
     }
 
     @Test
     public void FiftyFiveShouldPrintBuzzPuff() {
-        assertEquals("BuzzPuff", fizzBuzz.play(55));
+        Assert.assertEquals("BuzzPuff", fizzBuzz.play(55));
     }
 
     @Test
     public void SeventyFiveShouldPrintBangPuff() {
-        assertEquals("BangPuff", fizzBuzz.play(77));
+        Assert.assertEquals("BangPuff", fizzBuzz.play(77));
     }
 
     @Test
     public void oneHundredSixtyFiveShouldPrintFizzBuzzPuff() {
-        assertEquals("FizzBuzzPuff", fizzBuzz.play(165));
+        Assert.assertEquals("FizzBuzzPuff", fizzBuzz.play(165));
     }
 
     @Test
     public void oneThousandOneHundredFiftyFiveShouldPrintFizzBuzzBangPuff() {
-        assertEquals("FizzBuzzBangPuff", fizzBuzz.play(1155));
+        Assert.assertEquals("FizzBuzzBangPuff", fizzBuzz.play(1155));
     }
 
     @Test
