@@ -15,7 +15,8 @@ public class FizzBuzzTest {
         fizzBuzz = new FizzBuzz(Arrays.asList(
                 new MultiplesOfThree(),
                 new MultiplesOfFive(),
-                new MultiplesOfSeven()
+                new MultiplesOfSeven(),
+                new MultiplesOfEleven()
         ));
     }
 
@@ -120,11 +121,40 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void acceptanceWithRules() {
-        int[] numbers = new int[]           {  1,   2,    3,     4,    5,      6,      7,     8,    9,      10,    11,    12 ,   13,    14,      15 };
-        String[] expected = new String[]    { "1", "2", "Fizz", "4", "Buzz", "Fizz", "Bang", "8", "Fizz", "Buzz", "11", "Fizz", "13", "Bang", "FizzBuzz" };
+    public void twentyTwoShouldPrintPuff() {
+        assertEquals("Puff", fizzBuzz.play(22));
+    }
 
-        // todo replace with java 8 stream
+    @Test
+    public void thirtyThreeShouldPrintFizzPuff() {
+        assertEquals("FizzPuff", fizzBuzz.play(33));
+    }
+
+    @Test
+    public void FiftyFiveShouldPrintBuzzPuff() {
+        assertEquals("BuzzPuff", fizzBuzz.play(55));
+    }
+
+    @Test
+    public void SeventyFiveShouldPrintBangPuff() {
+        assertEquals("BangPuff", fizzBuzz.play(77));
+    }
+
+    @Test
+    public void oneHundredSixtyFiveShouldPrintFizzBuzzPuff() {
+        assertEquals("FizzBuzzPuff", fizzBuzz.play(165));
+    }
+
+    @Test
+    public void oneThousandOneHundredFiftyFiveShouldPrintFizzBuzzBangPuff() {
+        assertEquals("FizzBuzzBangPuff", fizzBuzz.play(1155));
+    }
+
+    @Test
+    public void acceptanceWithRules() {
+        int[] numbers = new int[]           {  1,   2,    3,     4,    5,      6,      7,     8,    9,      10,     11,    12 ,   13,    14,      15 };
+        String[] expected = new String[]    { "1", "2", "Fizz", "4", "Buzz", "Fizz", "Bang", "8", "Fizz", "Buzz", "Puff", "Fizz", "13", "Bang", "FizzBuzz" };
+
         String[] actual = Arrays.stream(numbers)
                 .mapToObj(n -> fizzBuzz.play(n))
                 .toArray(String[]::new);

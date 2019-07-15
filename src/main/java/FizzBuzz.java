@@ -7,7 +7,6 @@ public class FizzBuzz {
         this.rules = rules;
     }
 
-    // todo add puff for multiples of 11
     public String play(int number) {
         StringBuilder result = new StringBuilder();
 
