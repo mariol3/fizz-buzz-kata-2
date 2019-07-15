@@ -100,6 +100,16 @@ public class FizzBuzzTest {
     }
 
     @Test
+    public void fourtyTwoShouldPrintFizzBang() {
+        assertEquals("FizzBang", fizzBuzz.play(42));
+    }
+
+    @Test
+    public void sixtyThreeShouldPrintFizzBang() {
+        assertEquals("FizzBang", fizzBuzz.play(63));
+    }
+
+    @Test
     public void acceptance() {
         int[] numbers = new int[]           {  1,   2,    3,     4,    5,      6,      7,     8,    9,      10,    11,    12 ,   13,    14,      15 };
         String[] expected = new String[]    { "1", "2", "Fizz", "4", "Buzz", "Fizz", "Bang", "8", "Fizz", "Buzz", "11", "Fizz", "13", "Bang", "FizzBuzz" };
