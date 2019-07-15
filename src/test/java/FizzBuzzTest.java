@@ -84,9 +84,14 @@ public class FizzBuzzTest {
     }
 
     @Test
+    public void fourteenShouldPrintBang() {
+        assertEquals("Bang", fizzBuzz.play(14));
+    }
+
+    @Test
     public void acceptance() {
-        int[] numbers = new int[]           {  1,   2,    3,     4,    5,      6,      7,     8,    9,      10,    11,    12 ,   13,   14,      15 };
-        String[] expected = new String[]    { "1", "2", "Fizz", "4", "Buzz", "Fizz", "Bang", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz" };
+        int[] numbers = new int[]           {  1,   2,    3,     4,    5,      6,      7,     8,    9,      10,    11,    12 ,   13,    14,      15 };
+        String[] expected = new String[]    { "1", "2", "Fizz", "4", "Buzz", "Fizz", "Bang", "8", "Fizz", "Buzz", "11", "Fizz", "13", "Bang", "FizzBuzz" };
 
         // todo replace with java 8 stream
         String[] actual = Arrays.stream(numbers)
