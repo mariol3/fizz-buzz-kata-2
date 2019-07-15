@@ -1,10 +1,11 @@
+import java.util.ArrayList;
 import java.util.List;
 
 public class FizzBuzz {
     private List<GameRule> rules;
 
     public FizzBuzz(List<GameRule> rules) {
-        this.rules = rules;
+        this.rules = new ArrayList<>(rules);
     }
 
     public String play(int number) {
