@@ -1,32 +1,21 @@
+import java.util.List;
+
 public class FizzBuzz {
-    private GameRules gameRules = new ClassicGameRules();
+    private List<GameRule> rules;
 
-    public FizzBuzz() {
+    public FizzBuzz(List<GameRule> rules) {
+        this.rules = rules;
     }
 
-    public FizzBuzz(GameRules gameRules) {
-        this.gameRules = gameRules;
-    }
-
-    // todo add bang for multiples of 7
     // todo add puff for multiples of 11
     public String play(int number) {
         StringBuilder result = new StringBuilder();
 
-        if (gameRules.isFizz(number)) {
-            result.append("Fizz");
-        }
-        if (gameRules.isBuzz(number)) {
-            result.append("Buzz");
-        }
-        if (gameRules.isBang(number)) {
-            result.append("Bang");
-        }
-        if (result.length() == 0) {
-            result.append(number);
-        }
+        rules.forEach(rule -> {
+            if (rule.matches(number)) result.append(rule.matchingText());
+        });
 
-        return result.toString();
+        return result.length() != 0 ? result.toString() : String.valueOf(number);
     }
 
 }

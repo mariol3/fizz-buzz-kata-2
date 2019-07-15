@@ -1,8 +1,8 @@
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 import static org.junit.Assert.assertArrayEquals;
@@ -14,7 +14,10 @@ public class TwoFiveFizzBuzz {
 
     @Before
     public void setUp() throws Exception {
-        fizzBuzz = new FizzBuzz(new TwoFiveGameRules());
+        fizzBuzz = fizzBuzz = new FizzBuzz(Arrays.asList(
+                new MultiplesOfTwo(),
+                new MultiplesOfFive()
+        ));
     }
 
     @Test

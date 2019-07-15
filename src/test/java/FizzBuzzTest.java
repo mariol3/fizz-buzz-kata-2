@@ -1,11 +1,7 @@
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
@@ -16,7 +12,11 @@ public class FizzBuzzTest {
 
     @Before
     public void setUp() throws Exception {
-        fizzBuzz = new FizzBuzz();
+        fizzBuzz = new FizzBuzz(Arrays.asList(
+                new MultiplesOfThree(),
+                new MultiplesOfFive(),
+                new MultiplesOfSeven()
+        ));
     }
 
     @Test
@@ -120,7 +120,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void acceptance() {
+    public void acceptanceWithRules() {
         int[] numbers = new int[]           {  1,   2,    3,     4,    5,      6,      7,     8,    9,      10,    11,    12 ,   13,    14,      15 };
         String[] expected = new String[]    { "1", "2", "Fizz", "4", "Buzz", "Fizz", "Bang", "8", "Fizz", "Buzz", "11", "Fizz", "13", "Bang", "FizzBuzz" };
 
