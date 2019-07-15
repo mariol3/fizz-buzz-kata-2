@@ -2,7 +2,9 @@ import org.junit.Before;
 import org.junit.Test;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
@@ -80,12 +82,12 @@ public class FizzBuzzTest {
     public void acceptance() {
         int[] numbers = new int[]           {  1,   2,    3,     4,    5,      6,     7,   8,    9,      10,    11,    12 ,   13,   14,      15 };
         String[] expected = new String[]    { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz" };
-        List<String> actual = new ArrayList<>();
 
-        for (int number : numbers) {
-            actual.add(fizzBuzz.play(number));
-        }
+        // todo replace with java 8 stream
+        String[] actual = Arrays.stream(numbers)
+                .mapToObj(n -> fizzBuzz.play(n))
+                .toArray(String[]::new);
 
-        assertArrayEquals(expected, actual.toArray());
+        assertArrayEquals(expected, actual);
     }
 }

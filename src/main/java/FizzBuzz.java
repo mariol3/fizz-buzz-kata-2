@@ -8,6 +8,8 @@ public class FizzBuzz {
         this.gameRules = gameRules;
     }
 
+    // todo add bang for multiples of 7
+    // todo add puff for multiples of 11
     public String play(int number) {
         if (gameRules.isFizzBuzz(number)) return "FizzBuzz";
         else if (gameRules.isFizz(number)) return "Fizz";
