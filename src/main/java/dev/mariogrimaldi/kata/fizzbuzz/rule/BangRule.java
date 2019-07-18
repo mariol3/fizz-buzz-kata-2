@@ -1,9 +1,9 @@
 package dev.mariogrimaldi.kata.fizzbuzz.rule;
 
-public class MultiplesOfEleven implements GameRule {
+public class BangRule implements GameRule {
 
     @Override
     public String applyFor(int number) {
-        return number % 11 == 0 ? "Puff" : "";
+        return number % 7 == 0 ? "Bang" : "";
     }
 }

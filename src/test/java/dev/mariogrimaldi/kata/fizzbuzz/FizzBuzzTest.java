@@ -8,7 +8,6 @@ import org.junit.Test;
 import java.util.Arrays;
 
 import static org.junit.Assert.assertArrayEquals;
-import static org.junit.Assert.assertEquals;
 
 public class FizzBuzzTest {
 
@@ -17,12 +16,12 @@ public class FizzBuzzTest {
     @Before
     public void setUp() throws Exception {
         fizzBuzz = new FizzBuzz(Arrays.asList(
-                new MultiplesOfThree(),
-                new MultiplesOfFive(),
-                new MultiplesOfSeven(),
-                new MultiplesOfEleven(),
-                new Deluxe(),
-                new FakeDeluxe()
+                new FizzRule(),
+                new BuzzRule(),
+                new BangRule(),
+                new PuffRule(),
+                new DeluxeRule(),
+                new FakeDeluxeRule()
         ));
     }
 
