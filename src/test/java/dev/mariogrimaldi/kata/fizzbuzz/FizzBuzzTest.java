@@ -132,17 +132,17 @@ public class FizzBuzzTest {
 
     @Test
     public void thirtyThreeShouldPrintFizzPuffDeluxe() {
-        Assert.assertEquals("FizzPuffDeluxe", fizzBuzz.play(33));
+        Assert.assertEquals("FizzPuffFakeDeluxe", fizzBuzz.play(33));
     }
 
     @Test
     public void FiftyFiveShouldPrintBuzzPuffDeluxe() {
-        Assert.assertEquals("BuzzPuffDeluxe", fizzBuzz.play(55));
+        Assert.assertEquals("BuzzPuffFakeDeluxe", fizzBuzz.play(55));
     }
 
     @Test
     public void SeventyFiveShouldPrintBangPuffDeluxe() {
-        Assert.assertEquals("BangPuffDeluxe", fizzBuzz.play(77));
+        Assert.assertEquals("BangPuffFakeDeluxe", fizzBuzz.play(77));
     }
 
     @Test
@@ -158,7 +158,7 @@ public class FizzBuzzTest {
     @Test
     public void acceptanceWithRules() {
         int[] numbers = new int[]           {  1,   2,    3,     4,    5,      6,      7,     8,    9,      10,        11,    12 ,   13,    14,      15 };
-        String[] expected = new String[]    { "1", "2", "Fizz", "4", "Buzz", "Fizz", "Bang", "8", "Fizz", "Buzz", "PuffDeluxe", "Fizz", "13", "Bang", "FizzBuzz" };
+        String[] expected = new String[]    { "1", "2", "Fizz", "4", "Buzz", "Fizz", "Bang", "8", "Fizz", "Buzz", "PuffFakeDeluxe", "Fizz", "13", "Bang", "FizzBuzz" };
 
         String[] actual = Arrays.stream(numbers)
                 .mapToObj(n -> fizzBuzz.play(n))
