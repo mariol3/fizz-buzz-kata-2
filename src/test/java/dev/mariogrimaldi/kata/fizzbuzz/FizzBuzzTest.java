@@ -20,7 +20,8 @@ public class FizzBuzzTest {
                 new MultiplesOfThree(),
                 new MultiplesOfFive(),
                 new MultiplesOfSeven(),
-                new MultiplesOfEleven()
+                new MultiplesOfEleven(),
+                new Deluxe()
         ));
     }
 
@@ -125,7 +126,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void twentyTwoShouldPrintPuff() {
+    public void twentyTwoShouldPrintPuffDeluxe() {
         Assert.assertEquals("Puff", fizzBuzz.play(22));
     }
 
@@ -156,8 +157,8 @@ public class FizzBuzzTest {
 
     @Test
     public void acceptanceWithRules() {
-        int[] numbers = new int[]           {  1,   2,    3,     4,    5,      6,      7,     8,    9,      10,     11,    12 ,   13,    14,      15 };
-        String[] expected = new String[]    { "1", "2", "Fizz", "4", "Buzz", "Fizz", "Bang", "8", "Fizz", "Buzz", "Puff", "Fizz", "13", "Bang", "FizzBuzz" };
+        int[] numbers = new int[]           {  1,   2,    3,     4,    5,      6,      7,     8,    9,      10,        11,    12 ,   13,    14,      15 };
+        String[] expected = new String[]    { "1", "2", "Fizz", "4", "Buzz", "Fizz", "Bang", "8", "Fizz", "Buzz", "PuffDeluxe", "Fizz", "13", "Bang", "FizzBuzz" };
 
         String[] actual = Arrays.stream(numbers)
                 .mapToObj(n -> fizzBuzz.play(n))
