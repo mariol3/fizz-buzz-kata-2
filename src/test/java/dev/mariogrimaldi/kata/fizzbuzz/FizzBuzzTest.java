@@ -1,9 +1,6 @@
 package dev.mariogrimaldi.kata.fizzbuzz;
 
-import dev.mariogrimaldi.kata.fizzbuzz.rule.MultiplesOfEleven;
-import dev.mariogrimaldi.kata.fizzbuzz.rule.MultiplesOfFive;
-import dev.mariogrimaldi.kata.fizzbuzz.rule.MultiplesOfSeven;
-import dev.mariogrimaldi.kata.fizzbuzz.rule.MultiplesOfThree;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.*;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -11,6 +8,7 @@ import org.junit.Test;
 import java.util.Arrays;
 
 import static org.junit.Assert.assertArrayEquals;
+import static org.junit.Assert.assertEquals;
 
 public class FizzBuzzTest {
 
