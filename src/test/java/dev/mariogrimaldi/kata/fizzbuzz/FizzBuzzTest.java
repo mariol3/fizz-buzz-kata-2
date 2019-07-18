@@ -21,7 +21,8 @@ public class FizzBuzzTest {
                 new MultiplesOfFive(),
                 new MultiplesOfSeven(),
                 new MultiplesOfEleven(),
-                new Deluxe()
+                new Deluxe(),
+                new FakeDeluxe()
         ));
     }
 
