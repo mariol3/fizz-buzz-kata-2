@@ -136,8 +136,8 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void FiftyFiveShouldPrintBuzzPuff() {
-        Assert.assertEquals("BuzzPuff", fizzBuzz.play(55));
+    public void FiftyFiveShouldPrintBuzzPuffDeluxe() {
+        Assert.assertEquals("BuzzPuffDeluxe", fizzBuzz.play(55));
     }
 
     @Test
