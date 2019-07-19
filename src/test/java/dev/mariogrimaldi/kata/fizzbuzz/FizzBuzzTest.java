@@ -17,10 +17,10 @@ public class FizzBuzzTest {
     @Before
     public void setUp() throws Exception {
         fizzBuzz = new FizzBuzz(Arrays.asList(
-                new FizzRule(),
-                new BuzzRule(),
-                new BangRule(),
-                new PuffRule(),
+                new DivisibleByRule(3, "Fizz"),
+                new DivisibleByRule(5, "Buzz"),
+                new DivisibleByRule(7, "Bang"),
+                new DivisibleByRule(11, "Puff"),
                 new DeluxeRule(),
                 new FakeDeluxeRule()
         ));
