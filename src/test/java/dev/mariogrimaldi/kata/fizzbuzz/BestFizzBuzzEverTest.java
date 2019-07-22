@@ -68,7 +68,7 @@ public class BestFizzBuzzEverTest {
 
     @Test
     public void acceptanceWithRules() {
-        int[] numbers = new int[]           {  1,   2,       3,            4,         5,           6,      7,   8,    9,      10,    11,    12 ,   13,   14,        15 };
+        int[] numbers = new int[]           {  1,   2,         3,          4,         5,           6,      7,   8,    9,      10,    11,    12 ,   13,   14,        15 };
         String[] expected = new String[]    { "1", "2", "FizzFakeDeluxe", "4", "BuzzFakeDeluxe", "Fizz",  "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzzFakeDeluxe" };
 
         String[] actual = Arrays.stream(numbers)

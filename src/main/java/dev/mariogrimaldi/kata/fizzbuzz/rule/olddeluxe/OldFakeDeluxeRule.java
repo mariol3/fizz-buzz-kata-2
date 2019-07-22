@@ -1,8 +1,8 @@
 package dev.mariogrimaldi.kata.fizzbuzz.rule.olddeluxe;
 
-public class FakeDeluxeRule extends DeluxeRuleBehaviour {
+public class OldFakeDeluxeRule extends OldDeluxeRuleBehaviour {
 
-    public FakeDeluxeRule() {
+    public OldFakeDeluxeRule() {
         super("FakeDeluxe");
     }
 

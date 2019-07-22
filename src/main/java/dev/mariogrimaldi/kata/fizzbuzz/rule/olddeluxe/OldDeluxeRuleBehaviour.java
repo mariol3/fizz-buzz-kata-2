@@ -4,9 +4,9 @@ import dev.mariogrimaldi.kata.fizzbuzz.rule.GameRule;
 
 import java.util.stream.Collectors;
 
-public abstract class DeluxeRuleBehaviour extends GameRule {
+public abstract class OldDeluxeRuleBehaviour extends GameRule {
 
-    public DeluxeRuleBehaviour(String ruleText) {
+    public OldDeluxeRuleBehaviour(String ruleText) {
         super(ruleText);
     }
 
