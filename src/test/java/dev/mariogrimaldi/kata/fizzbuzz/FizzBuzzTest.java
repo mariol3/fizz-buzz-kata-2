@@ -1,7 +1,8 @@
 package dev.mariogrimaldi.kata.fizzbuzz;
 
 import dev.mariogrimaldi.kata.fizzbuzz.rule.*;
-import org.junit.Assert;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.deluxe.DeluxeRule;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.deluxe.FakeDeluxeRule;
 import org.junit.Before;
 import org.junit.Test;
 

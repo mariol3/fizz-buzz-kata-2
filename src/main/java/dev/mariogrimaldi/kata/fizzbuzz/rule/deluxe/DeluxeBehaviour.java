@@ -1,18 +1,17 @@
-package dev.mariogrimaldi.kata.fizzbuzz.rule;
+package dev.mariogrimaldi.kata.fizzbuzz.rule.deluxe;
+
+import dev.mariogrimaldi.kata.fizzbuzz.rule.GameRule;
 
 import java.util.stream.Collectors;
 
-public class DeluxeRule implements GameRule {
-    @Override
-    public String applyFor(int number) {
-        return isDeluxe(number) && number % 2 == 0 ? "Deluxe" : "";
-    }
+public abstract class DeluxeBehaviour implements GameRule {
 
-    private boolean isDeluxe(int number) {
+    protected boolean isDeluxe(int number) {
         int numberOfUniqueDigits = String.valueOf(number)
                 .chars()
                 .boxed()
                 .collect(Collectors.toSet()).size();
         return number > 10 && numberOfUniqueDigits == 1;
     }
+
 }
