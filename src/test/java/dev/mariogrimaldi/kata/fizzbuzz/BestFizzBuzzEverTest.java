@@ -54,6 +54,13 @@ public class BestFizzBuzzEverTest {
     }
 
     @Test
+    public void testFizzBuzzDeluxe() {
+        assertEquals("FizzBuzzDeluxe", fizzBuzz.play(30));
+        assertEquals("FizzBuzzDeluxe", fizzBuzz.play(150));
+        assertEquals("FizzBuzzDeluxe", fizzBuzz.play(300));
+    }
+
+    @Test
     public void testFizzBuzzFakeDeluxe() {
         assertEquals("FizzBuzzFakeDeluxe", fizzBuzz.play(15));
         assertEquals("FizzBuzzFakeDeluxe", fizzBuzz.play(45));
