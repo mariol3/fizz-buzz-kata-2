@@ -1,4 +1,4 @@
-package dev.mariogrimaldi.kata.fizzbuzz.rule.deluxe;
+package dev.mariogrimaldi.kata.fizzbuzz.rule.olddeluxe;
 
 import dev.mariogrimaldi.kata.fizzbuzz.rule.GameRule;
 

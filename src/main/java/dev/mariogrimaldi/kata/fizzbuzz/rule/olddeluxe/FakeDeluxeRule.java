@@ -1,4 +1,4 @@
-package dev.mariogrimaldi.kata.fizzbuzz.rule.deluxe;
+package dev.mariogrimaldi.kata.fizzbuzz.rule.olddeluxe;
 
 public class FakeDeluxeRule extends DeluxeBehaviour {
 
