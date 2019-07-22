@@ -11,7 +11,7 @@ import java.util.Arrays;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
-public class FizzBuzzTest {
+public class OldDeluxeFizzBuzzShould {
 
     private FizzBuzz fizzBuzz;
 
@@ -28,133 +28,134 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void oneShouldPrintOne() {
+    public void print_one_for_1() {
         assertEquals("1", fizzBuzz.play(1));
     }
 
     @Test
-    public void twoShouldPrintTwo() {
+    public void print_two_for_2() {
         assertEquals("2", fizzBuzz.play(2));
     }
 
     @Test
-    public void fourShouldPrintFour() {
+    public void print_four_for_4() {
         assertEquals("4", fizzBuzz.play(4));
     }
 
     @Test
-    public void threeShouldPrintFizz() {
+    public void print_fizz_for_3() {
         assertEquals("Fizz", fizzBuzz.play(3));
     }
 
     @Test
-    public void sixShouldPrintFizz() {
+    public void print_fizz_for_6() {
         assertEquals("Fizz", fizzBuzz.play(6));
     }
 
     @Test
-    public void nineShouldPrintFizz() {
+    public void print_fizz_for_9() {
         assertEquals("Fizz", fizzBuzz.play(9));
     }
 
     @Test
-    public void fiveShouldPrintBuzz() {
+    public void print_buzz_for_5() {
         assertEquals("Buzz", fizzBuzz.play(5));
     }
 
     @Test
-    public void tenShouldPrintBuzz() {
+    public void print_buzz_for_10() {
         assertEquals("Buzz", fizzBuzz.play(10));
     }
 
     @Test
-    public void twentyShouldPrintBuzz() {
+    public void print_buzz_for_20() {
         assertEquals("Buzz", fizzBuzz.play(20));
     }
 
     @Test
-    public void fifteenShouldPrintFizzBuzz() {
+    public void print_fizzbuzz_for_15() {
         assertEquals("FizzBuzz", fizzBuzz.play(15));
     }
 
     @Test
-    public void thirtyShouldPrintFizzBuzz() {
+    public void print_fizzbuzz_for_30() {
         assertEquals("FizzBuzz", fizzBuzz.play(30));
     }
 
     @Test
-    public void fourtyFiveShouldPrintFizzBuzz() {
+    public void print_fizzbuzz_for_45() {
         assertEquals("FizzBuzz", fizzBuzz.play(45));
     }
 
     @Test
-    public void sevenShouldPrintBang() {
+    public void print_bang_for_7() {
         assertEquals("Bang", fizzBuzz.play(7));
     }
 
     @Test
-    public void fourteenShouldPrintBang() {
+    public void print_bang_for_14() {
         assertEquals("Bang", fizzBuzz.play(14));
     }
 
     @Test
-    public void twentyEightShouldPrintBang() {
+    public void print_bang_for_28() {
         assertEquals("Bang", fizzBuzz.play(28));
     }
 
     @Test
-    public void twentyOneShouldPrintFizzBang() {
+    public void print_fizzbang_for_21() {
         assertEquals("FizzBang", fizzBuzz.play(21));
     }
 
     @Test
-    public void fourtyTwoShouldPrintFizzBang() {
+    public void print_fizzbang_for_42() {
         assertEquals("FizzBang", fizzBuzz.play(42));
     }
 
     @Test
-    public void sixtyThreeShouldPrintFizzBang() {
+    public void print_fizzbang_for_63() {
         assertEquals("FizzBang", fizzBuzz.play(63));
     }
 
     @Test
-    public void thirtyFiveShouldPrintBuzzBang() {
+    public void print_buzzbang_for_35() {
         assertEquals("BuzzBang", fizzBuzz.play(35));
     }
 
     @Test
-    public void oneHundredFiveShouldPrintFizzBuzzBang() {
+    public void print_fizzbuzzbang_for_105() {
         assertEquals("FizzBuzzBang", fizzBuzz.play(105));
     }
 
-    @Test
-    public void twentyTwoShouldPrintPuffDeluxe() {
-        assertEquals("PuffDeluxe", fizzBuzz.play(22));
-    }
 
     @Test
-    public void thirtyThreeShouldPrintFizzPuffDeluxe() {
-        assertEquals("FizzPuffFakeDeluxe", fizzBuzz.play(33));
-    }
-
-    @Test
-    public void FiftyFiveShouldPrintBuzzPuffDeluxe() {
-        assertEquals("BuzzPuffFakeDeluxe", fizzBuzz.play(55));
-    }
-
-    @Test
-    public void SeventyFiveShouldPrintBangPuffDeluxe() {
-        assertEquals("BangPuffFakeDeluxe", fizzBuzz.play(77));
-    }
-
-    @Test
-    public void oneHundredSixtyFiveShouldPrintFizzBuzzPuff() {
+    public void print_fizzbuzzpuff_for_165() {
         assertEquals("FizzBuzzPuff", fizzBuzz.play(165));
     }
 
     @Test
-    public void oneThousandOneHundredFiftyFiveShouldPrintFizzBuzzBangPuff() {
+    public void print_fizzbuzzbangpuff_for_1155() {
         assertEquals("FizzBuzzBangPuff", fizzBuzz.play(1155));
+    }
+
+    @Test
+    public void print_puffdeluxe_for_22() {
+        assertEquals("PuffDeluxe", fizzBuzz.play(22));
+    }
+
+    @Test
+    public void print_fizzpufffakedeluxe_for_33() {
+        assertEquals("FizzPuffFakeDeluxe", fizzBuzz.play(33));
+    }
+
+    @Test
+    public void print_buzzpufffakedeluxe_for_55() {
+        assertEquals("BuzzPuffFakeDeluxe", fizzBuzz.play(55));
+    }
+
+    @Test
+    public void print_bangpufffakedeluxe_for_77() {
+        assertEquals("BangPuffFakeDeluxe", fizzBuzz.play(77));
     }
 
     @Test
