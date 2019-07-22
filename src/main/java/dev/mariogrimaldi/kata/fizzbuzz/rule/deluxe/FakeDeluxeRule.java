@@ -4,7 +4,11 @@ public class FakeDeluxeRule extends DeluxeBehaviour {
 
     @Override
     public String applyFor(int number) {
-        return isDeluxe(number) && number % 2 != 0 ? "FakeDeluxe" : "";
+        return isDeluxe(number) && isOdd(number) ? "FakeDeluxe" : "";
+    }
+
+    private boolean isOdd(int number) {
+        return number % 2 != 0;
     }
 
 }

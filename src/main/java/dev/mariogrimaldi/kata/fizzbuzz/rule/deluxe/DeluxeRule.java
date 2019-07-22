@@ -4,7 +4,11 @@ public class DeluxeRule extends DeluxeBehaviour {
 
     @Override
     public String applyFor(int number) {
-        return isDeluxe(number) && number % 2 == 0 ? "Deluxe" : "";
+        return isDeluxe(number) && isEven(number) ? "Deluxe" : "";
+    }
+
+    private boolean isEven(int number) {
+        return number % 2 == 0;
     }
 
 }
