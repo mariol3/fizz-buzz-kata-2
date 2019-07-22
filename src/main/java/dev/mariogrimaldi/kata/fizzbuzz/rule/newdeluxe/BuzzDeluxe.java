@@ -1,4 +1,6 @@
-package dev.mariogrimaldi.kata.fizzbuzz.rule;
+package dev.mariogrimaldi.kata.fizzbuzz.rule.newdeluxe;
+
+import dev.mariogrimaldi.kata.fizzbuzz.rule.GameRule;
 
 import java.util.stream.Collectors;
 

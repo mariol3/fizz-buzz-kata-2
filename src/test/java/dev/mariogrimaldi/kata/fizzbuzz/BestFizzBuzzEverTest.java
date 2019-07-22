@@ -1,6 +1,8 @@
 package dev.mariogrimaldi.kata.fizzbuzz;
 
-import dev.mariogrimaldi.kata.fizzbuzz.rule.*;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.newdeluxe.BuzzDeluxe;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.newdeluxe.FizzDeluxe;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.newdeluxe.NewDeluxe;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,8 +17,8 @@ public class BestFizzBuzzEverTest {
     @Before
     public void setUp() throws Exception {
         fizzBuzz = new FizzBuzz(Arrays.asList(
-                new FizzDeluxe(),
-                new BuzzDeluxe()
+                new NewDeluxe(3, "FizzDeluxe"),
+                new NewDeluxe(5, "BuzzDeluxe")
         ));
     }
 
