@@ -1,8 +1,8 @@
 package dev.mariogrimaldi.kata.fizzbuzz.rule.newdeluxe;
 
-public class NewDeluxe extends NewDeluxeBehaviour {
+public class Deluxe extends DeluxeBehaviour {
 
-    public NewDeluxe(int deluxeNumber) {
+    public Deluxe(int deluxeNumber) {
         super(deluxeNumber, "Deluxe");
     }
 

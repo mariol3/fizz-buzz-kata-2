@@ -4,10 +4,10 @@ import dev.mariogrimaldi.kata.fizzbuzz.rule.GameRule;
 
 import java.util.stream.Collectors;
 
-public abstract class NewDeluxeBehaviour extends GameRule {
+public abstract class DeluxeBehaviour extends GameRule {
     private int deluxeNumber;
 
-    public NewDeluxeBehaviour(int deluxeNumber, String ruleText) {
+    public DeluxeBehaviour(int deluxeNumber, String ruleText) {
         super(ruleText);
         this.deluxeNumber = deluxeNumber;
     }
