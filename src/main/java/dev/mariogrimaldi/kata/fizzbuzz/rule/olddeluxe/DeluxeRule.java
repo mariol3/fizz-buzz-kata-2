@@ -1,10 +1,14 @@
 package dev.mariogrimaldi.kata.fizzbuzz.rule.olddeluxe;
 
-public class DeluxeRule extends DeluxeBehaviour {
+public class DeluxeRule extends DeluxeRuleBehaviour {
+
+    public DeluxeRule() {
+        super("Deluxe");
+    }
 
     @Override
-    public String applyFor(int number) {
-        return isDeluxe(number) && isEven(number) ? "Deluxe" : "";
+    protected boolean isApplicableTo(int number) {
+        return isDeluxe(number) && isEven(number);
     }
 
     private boolean isEven(int number) {

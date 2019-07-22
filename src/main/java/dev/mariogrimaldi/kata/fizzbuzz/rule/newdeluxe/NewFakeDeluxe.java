@@ -2,13 +2,13 @@ package dev.mariogrimaldi.kata.fizzbuzz.rule.newdeluxe;
 
 public class NewFakeDeluxe extends NewDeluxeBehaviour {
 
-    public NewFakeDeluxe(int deluxeNumber, String ruleText) {
-        super(deluxeNumber, ruleText);
+    public NewFakeDeluxe(int deluxeNumber) {
+        super(deluxeNumber, "FakeDeluxe");
     }
 
     @Override
-    public String applyFor(int number) {
-        return isDeluxe(number) && isOdd(number) ? getRuleText() : "";
+    protected boolean isApplicableTo(int number) {
+        return isDeluxe(number) && isOdd(number);
     }
 
     private boolean isOdd(int number) {

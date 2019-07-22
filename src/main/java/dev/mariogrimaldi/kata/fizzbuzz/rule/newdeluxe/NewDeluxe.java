@@ -2,13 +2,13 @@ package dev.mariogrimaldi.kata.fizzbuzz.rule.newdeluxe;
 
 public class NewDeluxe extends NewDeluxeBehaviour {
 
-    public NewDeluxe(int deluxeNumber, String ruleText) {
-        super(deluxeNumber, ruleText);
+    public NewDeluxe(int deluxeNumber) {
+        super(deluxeNumber, "Deluxe");
     }
 
     @Override
-    public String applyFor(int number) {
-        return isDeluxe(number) && isEven(number) ? getRuleText() : "";
+    protected boolean isApplicableTo(int number) {
+        return isDeluxe(number) && isEven(number);
     }
 
     private boolean isEven(int number) {

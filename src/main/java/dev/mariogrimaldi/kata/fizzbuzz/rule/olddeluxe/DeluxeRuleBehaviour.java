@@ -4,7 +4,11 @@ import dev.mariogrimaldi.kata.fizzbuzz.rule.GameRule;
 
 import java.util.stream.Collectors;
 
-public abstract class DeluxeBehaviour implements GameRule {
+public abstract class DeluxeRuleBehaviour extends GameRule {
+
+    public DeluxeRuleBehaviour(String ruleText) {
+        super(ruleText);
+    }
 
     protected boolean isDeluxe(int number) {
         int numberOfUniqueDigits = String.valueOf(number)

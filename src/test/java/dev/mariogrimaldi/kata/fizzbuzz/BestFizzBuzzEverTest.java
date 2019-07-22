@@ -20,10 +20,10 @@ public class BestFizzBuzzEverTest {
         fizzBuzz = new FizzBuzz(Arrays.asList(
                 new DivisibleByRule(3, "Fizz"),
                 new DivisibleByRule(5, "Buzz"),
-                new NewDeluxe(3, "Deluxe"),
-                new NewDeluxe(5, "Deluxe"),
-                new NewFakeDeluxe(3, "FakeDeluxe"),
-                new NewFakeDeluxe(5, "FakeDeluxe")
+                new NewDeluxe(3),
+                new NewDeluxe(5),
+                new NewFakeDeluxe(3),
+                new NewFakeDeluxe(5)
         ));
     }
 

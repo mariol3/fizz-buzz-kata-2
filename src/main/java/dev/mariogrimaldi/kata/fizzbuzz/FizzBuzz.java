@@ -15,7 +15,7 @@ public class FizzBuzz {
     public String play(int number) {
         StringBuilder result = new StringBuilder();
 
-        rules.forEach(rule -> result.append(rule.applyFor(number)));
+        rules.forEach(rule -> result.append(rule.applyTo(number)));
 
         return result.length() != 0 ? result.toString() : String.valueOf(number);
     }

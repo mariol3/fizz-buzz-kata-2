@@ -4,31 +4,26 @@ import dev.mariogrimaldi.kata.fizzbuzz.rule.GameRule;
 
 import java.util.stream.Collectors;
 
-public abstract class NewDeluxeBehaviour implements GameRule {
+public abstract class NewDeluxeBehaviour extends GameRule {
     private int deluxeNumber;
-    private final String ruleText;
 
     public NewDeluxeBehaviour(int deluxeNumber, String ruleText) {
+        super(ruleText);
         this.deluxeNumber = deluxeNumber;
-        this.ruleText = ruleText;
-    }
-
-    protected int getDeluxeNumber() {
-        return deluxeNumber;
-    }
-
-    protected String getRuleText() {
-        return ruleText;
     }
 
     protected boolean isDeluxe(int number) {
-        boolean containsDeluxeNumber = String.valueOf(number).chars()
-                .mapToObj(n -> (char) n)
-                .collect(Collectors.toList())
-                .contains(Character.forDigit(getDeluxeNumber(), 10));
+        return isDivisibleByDeluxeNumber(number) && containsDeluxeNumber(number);
+    }
 
-        boolean divisibleByDeluxeNumber = number % getDeluxeNumber() == 0;
+    private boolean containsDeluxeNumber(int number) {
+        return String.valueOf(number).chars()
+                    .mapToObj(n -> (char) n)
+                    .collect(Collectors.toList())
+                    .contains(Character.forDigit(deluxeNumber, 10));
+    }
 
-        return divisibleByDeluxeNumber && containsDeluxeNumber;
+    private boolean isDivisibleByDeluxeNumber(int number) {
+        return number % deluxeNumber == 0;
     }
 }

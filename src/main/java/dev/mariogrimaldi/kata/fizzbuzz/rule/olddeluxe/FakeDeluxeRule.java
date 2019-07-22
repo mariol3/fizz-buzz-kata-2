@@ -1,10 +1,14 @@
 package dev.mariogrimaldi.kata.fizzbuzz.rule.olddeluxe;
 
-public class FakeDeluxeRule extends DeluxeBehaviour {
+public class FakeDeluxeRule extends DeluxeRuleBehaviour {
+
+    public FakeDeluxeRule() {
+        super("FakeDeluxe");
+    }
 
     @Override
-    public String applyFor(int number) {
-        return isDeluxe(number) && isOdd(number) ? "FakeDeluxe" : "";
+    protected boolean isApplicableTo(int number) {
+        return isDeluxe(number) && isOdd(number);
     }
 
     private boolean isOdd(int number) {

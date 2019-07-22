@@ -1,6 +1,6 @@
 package dev.mariogrimaldi.kata.fizzbuzz;
 
-import dev.mariogrimaldi.kata.fizzbuzz.rule.*;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.DivisibleByRule;
 import dev.mariogrimaldi.kata.fizzbuzz.rule.olddeluxe.DeluxeRule;
 import dev.mariogrimaldi.kata.fizzbuzz.rule.olddeluxe.FakeDeluxeRule;
 import org.junit.Before;
