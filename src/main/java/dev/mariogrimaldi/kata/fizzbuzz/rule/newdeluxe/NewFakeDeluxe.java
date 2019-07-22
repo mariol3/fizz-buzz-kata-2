@@ -4,12 +4,12 @@ import dev.mariogrimaldi.kata.fizzbuzz.rule.GameRule;
 
 import java.util.stream.Collectors;
 
-public class NewDeluxe implements GameRule {
+public class NewFakeDeluxe implements GameRule {
 
     private int deluxeNumber;
     private final String ruleText;
 
-    public NewDeluxe(int deluxeNumber, String ruleText) {
+    public NewFakeDeluxe(int deluxeNumber, String ruleText) {
         this.deluxeNumber = deluxeNumber;
         this.ruleText = ruleText;
     }
@@ -22,7 +22,7 @@ public class NewDeluxe implements GameRule {
                 .contains(Character.forDigit(deluxeNumber, 10));
         boolean divisibleByDeluxeNumber = number % deluxeNumber == 0;
 
-        return divisibleByDeluxeNumber && containsDeluxeNumber && number % 2 == 0? ruleText : "";
+        return divisibleByDeluxeNumber && containsDeluxeNumber && number % 2 != 0 ? ruleText : "";
     }
 
 }
