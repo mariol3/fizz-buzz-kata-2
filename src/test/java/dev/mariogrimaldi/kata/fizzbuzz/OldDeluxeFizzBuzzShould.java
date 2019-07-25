@@ -1,6 +1,7 @@
 package dev.mariogrimaldi.kata.fizzbuzz;
 
 import dev.mariogrimaldi.kata.fizzbuzz.rule.DivisibleByRule;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.factory.DeluxeFizzBuzzRuleFactory;
 import dev.mariogrimaldi.kata.fizzbuzz.rule.olddeluxe.OldDeluxeRule;
 import dev.mariogrimaldi.kata.fizzbuzz.rule.olddeluxe.OldFakeDeluxeRule;
 import org.junit.Before;
@@ -17,13 +18,14 @@ public class OldDeluxeFizzBuzzShould {
 
     @Before
     public void setUp() throws Exception {
+        DeluxeFizzBuzzRuleFactory rulesFactory = new DeluxeFizzBuzzRuleFactory();
         fizzBuzz = new FizzBuzz(Arrays.asList(
-                new DivisibleByRule(3, "Fizz"),
-                new DivisibleByRule(5, "Buzz"),
-                new DivisibleByRule(7, "Bang"),
-                new DivisibleByRule(11, "Puff"),
-                new OldDeluxeRule(),
-                new OldFakeDeluxeRule()
+                rulesFactory.fizzRule(),
+                rulesFactory.buzzRule(),
+                rulesFactory.bangRule(),
+                rulesFactory.puffRule(),
+                rulesFactory.deluxeRule(),
+                rulesFactory.fakeDeluxeRule()
         ));
     }
 
