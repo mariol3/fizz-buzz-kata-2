@@ -1,11 +1,11 @@
 package dev.mariogrimaldi.kata.fizzbuzz;
 
-import dev.mariogrimaldi.kata.fizzbuzz.rule.DivisibleByRule;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
 
+import static dev.mariogrimaldi.kata.fizzbuzz.GameFactory.GameMode.EXTENDED;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
@@ -15,12 +15,7 @@ public class FizzBuzzPuffBangShould {
 
     @Before
     public void setUp() throws Exception {
-        fizzBuzz = new FizzBuzz(Arrays.asList(
-                new DivisibleByRule(3, "Fizz"),
-                new DivisibleByRule(5, "Buzz"),
-                new DivisibleByRule(7, "Bang"),
-                new DivisibleByRule(11, "Puff")
-        ));
+        fizzBuzz = new GameFactory().createGame(EXTENDED);
     }
 
     @Test

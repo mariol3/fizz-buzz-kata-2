@@ -1,13 +1,11 @@
 package dev.mariogrimaldi.kata.fizzbuzz;
 
-import dev.mariogrimaldi.kata.fizzbuzz.rule.DivisibleByRule;
-import dev.mariogrimaldi.kata.fizzbuzz.rule.newdeluxe.DeluxeRule;
-import dev.mariogrimaldi.kata.fizzbuzz.rule.newdeluxe.FakeDeluxe;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
 
+import static dev.mariogrimaldi.kata.fizzbuzz.GameFactory.GameMode.BEST_EVER;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
@@ -17,14 +15,7 @@ public class BestFizzBuzzEverShould {
 
     @Before
     public void setUp() throws Exception {
-        fizzBuzz = new FizzBuzz(Arrays.asList(
-                new DivisibleByRule(3, "Fizz"),
-                new DivisibleByRule(5, "Buzz"),
-                new DeluxeRule(3),
-                new DeluxeRule(5),
-                new FakeDeluxe(3),
-                new FakeDeluxe(5)
-        ));
+        fizzBuzz = new GameFactory().createGame(BEST_EVER);
     }
 
     @Test

@@ -1,11 +1,11 @@
 package dev.mariogrimaldi.kata.fizzbuzz;
 
-import dev.mariogrimaldi.kata.fizzbuzz.rule.DivisibleByRule;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
 
+import static dev.mariogrimaldi.kata.fizzbuzz.GameFactory.GameMode.CLASSIC;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
@@ -15,10 +15,7 @@ public class FizzBuzzShould {
 
     @Before
     public void setUp() throws Exception {
-        fizzBuzz = new FizzBuzz(Arrays.asList(
-                new DivisibleByRule(3, "Fizz"),
-                new DivisibleByRule(5, "Buzz")
-        ));
+        fizzBuzz = new GameFactory().createGame(CLASSIC);
     }
 
     @Test
@@ -83,8 +80,8 @@ public class FizzBuzzShould {
 
     @Test
     public void print_from_1_to_15() {
-        int[] numbers = new int[]           {  1,   2,    3,     4,    5,      6,     7,   8,    9,      10,    11,    12 ,   13,   14,      15 };
-        String[] expected = new String[]    { "1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz" };
+        int[] numbers = new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15};
+        String[] expected = new String[]{"1", "2", "Fizz", "4", "Buzz", "Fizz", "7", "8", "Fizz", "Buzz", "11", "Fizz", "13", "14", "FizzBuzz"};
 
         String[] actual = Arrays.stream(numbers)
                 .mapToObj(fizzBuzz::play)

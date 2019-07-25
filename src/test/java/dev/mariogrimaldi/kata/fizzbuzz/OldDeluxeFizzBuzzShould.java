@@ -1,13 +1,11 @@
 package dev.mariogrimaldi.kata.fizzbuzz;
 
-import dev.mariogrimaldi.kata.fizzbuzz.rule.DivisibleByRule;
-import dev.mariogrimaldi.kata.fizzbuzz.rule.olddeluxe.OldDeluxeRule;
-import dev.mariogrimaldi.kata.fizzbuzz.rule.olddeluxe.OldFakeDeluxeRule;
 import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
 
+import static dev.mariogrimaldi.kata.fizzbuzz.GameFactory.GameMode.DELUXE;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertEquals;
 
@@ -17,14 +15,7 @@ public class OldDeluxeFizzBuzzShould {
 
     @Before
     public void setUp() throws Exception {
-        fizzBuzz = new FizzBuzz(Arrays.asList(
-                new DivisibleByRule(3, "Fizz"),
-                new DivisibleByRule(5, "Buzz"),
-                new DivisibleByRule(7, "Bang"),
-                new DivisibleByRule(11, "Puff"),
-                new OldDeluxeRule(),
-                new OldFakeDeluxeRule()
-        ));
+        fizzBuzz = new GameFactory().createGame(DELUXE);
     }
 
     @Test
