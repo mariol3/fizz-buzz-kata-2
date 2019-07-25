@@ -1,6 +1,7 @@
 package dev.mariogrimaldi.kata.fizzbuzz;
 
 import dev.mariogrimaldi.kata.fizzbuzz.rule.DivisibleByRule;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.GameBuilder;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -15,12 +16,12 @@ public class FizzBuzzPuffBangShould {
 
     @Before
     public void setUp() throws Exception {
-        fizzBuzz = new FizzBuzz(Arrays.asList(
-                new DivisibleByRule(3, "Fizz"),
-                new DivisibleByRule(5, "Buzz"),
-                new DivisibleByRule(7, "Bang"),
-                new DivisibleByRule(11, "Puff")
-        ));
+        fizzBuzz = new GameBuilder()
+                .withRule(new DivisibleByRule(3, "Fizz"))
+                .withRule(new DivisibleByRule(5, "Buzz"))
+                .withRule(new DivisibleByRule(7, "Bang"))
+                .withRule(new DivisibleByRule(11, "Puff"))
+                .createGame();
     }
 
     @Test
