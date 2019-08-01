@@ -1,11 +1,11 @@
-package dev.mariogrimaldi.kata.fizzbuzz.rule.finaldeluxe;
+package dev.mariogrimaldi.kata.fizzbuzz.rule.deluxe;
 
 import java.util.stream.Collectors;
 
-public class DeluxeBehaviour {
+public class NewDeluxeBehaviour implements DeluxeBehaviour {
     private int deluxeNumber;
 
-    public DeluxeBehaviour(int deluxeNumber) {
+    public NewDeluxeBehaviour(int deluxeNumber) {
         this.deluxeNumber = deluxeNumber;
     }
 

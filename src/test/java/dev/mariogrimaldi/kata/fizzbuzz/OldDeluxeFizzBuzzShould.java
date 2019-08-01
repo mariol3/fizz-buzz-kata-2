@@ -1,8 +1,9 @@
 package dev.mariogrimaldi.kata.fizzbuzz;
 
 import dev.mariogrimaldi.kata.fizzbuzz.rule.DivisibleByRule;
-import dev.mariogrimaldi.kata.fizzbuzz.rule.olddeluxe.OldDeluxeRule;
-import dev.mariogrimaldi.kata.fizzbuzz.rule.olddeluxe.OldFakeDeluxeRule;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.deluxe.DeluxeRule;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.deluxe.FakeDeluxe;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.deluxe.OldDeluxeBehaviour;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -22,8 +23,8 @@ public class OldDeluxeFizzBuzzShould {
                 new DivisibleByRule(5, "Buzz"),
                 new DivisibleByRule(7, "Bang"),
                 new DivisibleByRule(11, "Puff"),
-                new OldDeluxeRule(),
-                new OldFakeDeluxeRule()
+                new DeluxeRule(new OldDeluxeBehaviour()),
+                new FakeDeluxe(new OldDeluxeBehaviour())
         ));
     }
 
