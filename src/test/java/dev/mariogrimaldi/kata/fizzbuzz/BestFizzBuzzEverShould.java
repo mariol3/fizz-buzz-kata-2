@@ -1,8 +1,9 @@
 package dev.mariogrimaldi.kata.fizzbuzz;
 
 import dev.mariogrimaldi.kata.fizzbuzz.rule.DivisibleByRule;
-import dev.mariogrimaldi.kata.fizzbuzz.rule.newdeluxe.DeluxeRule;
-import dev.mariogrimaldi.kata.fizzbuzz.rule.newdeluxe.FakeDeluxe;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.finaldeluxe.DeluxeBehaviour;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.finaldeluxe.DeluxeRule;
+import dev.mariogrimaldi.kata.fizzbuzz.rule.finaldeluxe.FakeDeluxe;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -20,10 +21,10 @@ public class BestFizzBuzzEverShould {
         fizzBuzz = new FizzBuzz(Arrays.asList(
                 new DivisibleByRule(3, "Fizz"),
                 new DivisibleByRule(5, "Buzz"),
-                new DeluxeRule(3),
-                new DeluxeRule(5),
-                new FakeDeluxe(3),
-                new FakeDeluxe(5)
+                new DeluxeRule(new DeluxeBehaviour(3)),
+                new DeluxeRule(new DeluxeBehaviour(5)),
+                new FakeDeluxe(new DeluxeBehaviour(3)),
+                new FakeDeluxe(new DeluxeBehaviour(5))
         ));
     }
 

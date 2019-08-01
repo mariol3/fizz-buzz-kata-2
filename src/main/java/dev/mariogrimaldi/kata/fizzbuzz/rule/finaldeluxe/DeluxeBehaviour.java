@@ -1,18 +1,15 @@
-package dev.mariogrimaldi.kata.fizzbuzz.rule.newdeluxe;
-
-import dev.mariogrimaldi.kata.fizzbuzz.rule.GameRule;
+package dev.mariogrimaldi.kata.fizzbuzz.rule.finaldeluxe;
 
 import java.util.stream.Collectors;
 
-public abstract class DeluxeBehaviour extends GameRule {
+public class DeluxeBehaviour {
     private int deluxeNumber;
 
-    public DeluxeBehaviour(int deluxeNumber, String ruleText) {
-        super(ruleText);
+    public DeluxeBehaviour(int deluxeNumber) {
         this.deluxeNumber = deluxeNumber;
     }
 
-    protected boolean isDeluxe(int number) {
+    public boolean isDeluxe(int number) {
         return isDivisibleByDeluxeNumber(number) && containsDeluxeNumber(number);
     }
 
